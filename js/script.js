@@ -1,3 +1,11 @@
+// ?BONUS 1. Recuperiamo l'elemento row dall'html
+const row = document.querySelector('.row');
+
+
+// ?BONUS 2. Creiamo una variabile per inserire le col dentro alla row.
+let listMarkup = '<col>';
+
+
 // 1.Utilizzare ciclo for per creare una serie di numeri da 1 a 100
 for (let i = 1; i <= 100; i++) {
 
@@ -16,6 +24,14 @@ for (let i = 1; i <= 100; i++) {
     }
     else {
         console.log(i);
-    }
+    };
+
+    listMarkup += `<div> ${i} </div>`;
+
 }
+
+listMarkup += '</col>';
+row.innerHTML = listMarkup;
+
+
 
